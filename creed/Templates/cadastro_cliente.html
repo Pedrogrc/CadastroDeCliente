@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema de Cadastro</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body class="container bg-dark">
+	<br>
+
+	<div class="p-3 mb-2 bg-secondary text-white" role="alert">
+		<h2 class="text-center">Sistema de Cadastro - Lista de Clientes</h2>
+	</div>
+<div class="card container bg-light">
+	<div>
+		<ul class="nav nav-tabs nav justify-content-center">
+			<li class="nav-item">
+				<a class="nav-link disabled" href="../creed">Home</a> <!-- coloquei os '#' onde vc pode colocar o caminho o diretório onde vai estar o arquivo, caso queira.. -->
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="../creed/novo">Cadastrar</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="../creed/lista">Listas</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Logout</a>
+			</li>
+		</ul>
+	</div>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cadastar</button>
+    </form>
+</div>
+</body>
+</html>

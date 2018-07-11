@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema de Cadastro</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="container bg-dark">
+	<br>
+
+	<div class="p-3 mb-2 bg-secondary text-white" role="alert">
+		<h2 class="text-center">Sistema de Cadastro - Lista de Clientes</h2>
+	</div>
+<div class="card container bg-light">
+	<div>
+		<ul class="nav nav-tabs nav justify-content-center">
+			<li class="nav-item">
+				<a class="nav-link disabled" href="../creed">Home</a> <!-- coloquei os '#' onde vc pode colocar o caminho o diretório onde vai estar o arquivo, caso queira.. -->
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="../creed/novo">Cadastrar</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href=../creed/lista">Listas</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Logout</a>
+			</li>
+		</ul>
+	</div>
+
+	<table border="0" class="table">
+		<br>
+		<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">Nome</th>
+				<th scope="col">CPF</th>
+				<th scope="col">Telefone</th>
+				<th scope="col">E-mail</th>
+				<th scope="col">Editar</th>
+				<th scope="col">Excluir</th>
+			</tr>
+		</thead>
+		{% for cliente in clientes %}
+		<tr>
+			<td>{{cliente.pk}}</td>
+			<td>{{cliente.nome}}</td>
+			<td>{{cliente.cpf}}</td>
+			<td>{{cliente.telefone}}</td>
+			<td>{{cliente.email}}</td>
+			<td><a href="{% url 'editar_cliente' cliente.pk %}"><i class="material-icons">edit</i></a></td>
+			<td><a href="{% url 'delete_cliente' cliente.pk %}"><i class="material-icons">delete</i></a></td>
+		</tr>
+        {% endfor %}
+	</table>
+</div>
+
+</body>
+</html>
