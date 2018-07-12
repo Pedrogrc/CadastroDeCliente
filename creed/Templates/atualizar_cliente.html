@@ -17,24 +17,25 @@
 	<div>
 		<ul class="nav nav-tabs nav justify-content-center">
 			<li class="nav-item">
-				<a class="nav-link disabled" href="inicio">Home</a> <!-- coloquei os '#' onde vc pode colocar o caminho o diretório onde vai estar o arquivo, caso queira.. -->
+				<a class="nav-link disabled" href="#">Home</a> <!-- coloquei os '#' onde vc pode colocar o caminho o diretório onde vai estar o arquivo, caso queira.. -->
 			</li>
 			<li class="nav-item">
-				<a class="nav-link active" href="novo">Cadastrar</a>
+				<a class="nav-link disabled" href="#">Cadastrar</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link disabled" href="lista">Listas</a>
+				<a class="nav-link active" href="#">Listas</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link disabled" href="admin">Admin</a>
+				<a class="nav-link disabled" href="#">Admin</a>
 			</li>
 		</ul>
 	</div>
 	<div>
     <form method="POST">
+
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="btn btn-secondary btn-lg btn-block" type="submit">Cadastar</button>
+        <button class="btn btn-secondary btn-lg btn-block" type="submit">Atualizar</button>
     </form>
 	</div>
 </div>

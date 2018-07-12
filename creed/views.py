@@ -22,7 +22,7 @@ def editar_cliente(request, pk):
         form.save()
         return redirect('lista_clientes')
 
-    return render(request, 'cadastro_cliente.html', {'form': form})
+    return render(request, 'atualizar_cliente.html', {'form': form})
 
 
 def cadastro_cliente(request):
