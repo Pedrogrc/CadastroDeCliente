@@ -17,7 +17,7 @@
 	<div>
 		<ul class="nav nav-tabs nav justify-content-center">
 			<li class="nav-item">
-				<a class="nav-link active" href="inicio">Home</a> <!-- coloquei os '#' onde vc pode colocar o caminho o diretório onde vai estar o arquivo, caso queira.. -->
+				<a class="nav-link active" href="{% url 'index_url' %}">Home</a> <!-- coloquei os '#' onde vc pode colocar o caminho o diretório onde vai estar o arquivo, caso queira.. -->
 			</li>
 			<li class="nav-item">
 				<a class="nav-link disabled" href="novo">Cadastrar</a>
@@ -30,7 +30,22 @@
 			</li>
 		</ul>
 	</div>
+	<div>
+		<br>
+		<h5 class="text-center">O sistema de cadastro de clientes solicita o preenchimento do formulário eletrônico.</h5>
+		<h5 class="text-center">Para realizar a operação, favor clicar no menu de cadastro.</h5>
+		<br>
+		<h5 class="text-center">Para ver os clientes registrados no sistema, clique no menu de lista.</h5>
+		<br>
+		<h5 class="text-center">O sistema foi desenvolvido para ser usado diretamente por um funcionário de uma empresa</h5>
+		<h5 class="text-center">com fim de salvar os dados de clientes.</h5>
+
+	</div>
 
 </div>
+<div class="card bg-danger">
+		<h5 class="text-center">Desenvolvido por Beterraba System</h5>
+
+	</div>
 </body>
 </html>
